@@ -2,6 +2,10 @@ terraform {
     source = "git::git@github.com:rajops-lab/terraform-aws-vpc-module.git//modules/vpc?ref=main"
 }
 
+include "root" {
+  path = find_in_parent_folders()
+}
+
 # Create a VPC for the dev on mumbai region 
 inputs = {
     # in module i have defined default env "dev" here i want to assign it to dynamically otherwise it will add development

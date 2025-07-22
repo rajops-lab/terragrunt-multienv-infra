@@ -2,6 +2,9 @@ terraform {
     source = "git::git@github.com:rajops-lab/terraform-aws-vpc-module.git//modules/vpc?ref=main"
 }
 
+include "root" {
+  path = find_in_parent_folders()
+}
 # create a new vpc for prod in virginia region 
 inputs = {
     environment = "Production"
