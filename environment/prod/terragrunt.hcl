@@ -5,6 +5,7 @@ terraform {
 include "root" {
   path = find_in_parent_folders()
 }
+
 # create a new vpc for prod in virginia region 
 inputs = {
     environment = "Production"
