@@ -1,7 +1,7 @@
 # add terragrunt cache folder and terraform folder
 .terragrunt-cache
 .terraform*
-# .terraform.lock.hcl
+.terraform.lock.hcl
 
 # add git folders
 .git
